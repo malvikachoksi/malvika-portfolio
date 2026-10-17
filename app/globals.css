@@ -1,0 +1,217 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* --font-inter / --font-poppins are injected by next/font in layout.tsx,
+       which self-hosts the files. Declaring them here would shadow that with a
+       plain family name and send the browser back to a network lookup. */
+
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+    --card: 220 14% 96%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 199 89% 48%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 189 94% 43%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 199 89% 48%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 214 32% 80%;
+    --input: 214 32% 80%;
+    --ring: 199 89% 48%;
+    --chart-1: 199 89% 48%;
+    --chart-2: 189 94% 43%;
+    --chart-3: 173 58% 39%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.75rem;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 222 47% 11%;
+    --sidebar-primary: 199 89% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 14% 96%;
+    --sidebar-accent-foreground: 222 47% 11%;
+    --sidebar-border: 214 32% 80%;
+    --sidebar-ring: 199 89% 48%;
+  }
+
+  .dark {
+    --background: 222 47% 6%;
+    --foreground: 210 40% 98%;
+    --card: 222 40% 10%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 47% 8%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 199 89% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 189 80% 40%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 217 33% 15%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 199 89% 55%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 33% 20%;
+    --input: 217 33% 20%;
+    --ring: 199 89% 55%;
+    --chart-1: 199 89% 55%;
+    --chart-2: 189 80% 45%;
+    --chart-3: 173 58% 45%;
+    --chart-4: 43 80% 60%;
+    --chart-5: 27 87% 60%;
+    --sidebar-background: 222 47% 8%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 199 89% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 217 33% 15%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217 33% 20%;
+    --sidebar-ring: 199 89% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-sky-500 via-cyan-500 to-sky-400;
+  }
+
+  .glass {
+    @apply backdrop-blur-xl bg-white/80 border border-slate-200;
+  }
+
+  .glass-strong {
+    @apply backdrop-blur-2xl bg-white/90 border border-slate-200;
+  }
+
+  .glow-sky {
+    box-shadow: 0 0 40px rgba(14, 165, 233, 0.15), 0 0 80px rgba(14, 165, 233, 0.05);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary));
+}
+
+/* ---- Dark-mode overrides for legacy slate/white utilities ----
+   These components hardcode light palette classes (text-slate-*, bg-white,
+   border-slate-*, etc.) that don't respond to .dark. Remap them to the theme
+   tokens so text and surfaces stay legible in dark mode. Unlayered rules win
+   over Tailwind's layered utilities, and they only apply under .dark. */
+.dark .text-slate-900,
+.dark .text-slate-800 {
+  color: hsl(var(--foreground));
+}
+
+.dark .text-slate-700 {
+  color: hsl(var(--foreground) / 0.88);
+}
+
+.dark .text-slate-600,
+.dark .text-slate-500 {
+  color: hsl(var(--muted-foreground));
+}
+
+.dark .text-slate-400 {
+  color: hsl(var(--muted-foreground) / 0.75);
+}
+
+.dark .text-slate-100 {
+  color: hsl(var(--foreground) / 0.07);
+}
+
+.dark .bg-white,
+.dark .focus\:bg-white:focus {
+  background-color: hsl(var(--card));
+}
+
+.dark .bg-white\/80 {
+  background-color: hsl(var(--card) / 0.8);
+}
+
+.dark .bg-white\/90 {
+  background-color: hsl(var(--card) / 0.9);
+}
+
+.dark .bg-gray-100,
+.dark .hover\:bg-gray-200:hover {
+  background-color: hsl(var(--muted));
+}
+
+.dark .bg-gray-50 {
+  background-color: hsl(var(--muted) / 0.5);
+}
+
+.dark .bg-sky-50 {
+  background-color: hsl(var(--primary) / 0.12);
+}
+
+.dark .bg-sky-100 {
+  background-color: hsl(var(--primary) / 0.18);
+}
+
+.dark .border-slate-200,
+.dark .border-slate-100 {
+  border-color: hsl(var(--border));
+}
+
+.dark .border-sky-200 {
+  border-color: hsl(var(--primary) / 0.3);
+}
+
+.dark .border-sky-300 {
+  border-color: hsl(var(--primary) / 0.4);
+}
+
+.dark .hover\:text-slate-900:hover,
+.dark .hover\:text-slate-800:hover {
+  color: hsl(var(--foreground));
+}
+
+.dark .hover\:bg-slate-50:hover {
+  background-color: hsl(var(--muted));
+}
+
+.dark .hover\:bg-sky-50:hover {
+  background-color: hsl(var(--primary) / 0.12);
+}
+
+.dark .border-slate-800 {
+  border-color: hsl(var(--border));
+}

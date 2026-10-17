@@ -1,0 +1,38 @@
+/* Theme skin for the vendored DriftWall. The upstream component is built for a
+   dark page — tiles sit on a near-black plate and lean on a heavy overlay tint.
+   These overrides make it read as the site's own cards instead: a real surface,
+   a hairline border, and a resting shadow so tiles look like cards on white. */
+
+.projects-wall .drift-wall__inner {
+    background: #ffffff;
+    border: 1px solid rgb(226 232 240); /* slate-200, matches ProjectCard */
+    box-shadow: 0 12px 32px -22px rgb(15 23 42 / 0.45);
+}
+
+.projects-wall .drift-wall__tile img {
+    /* Upstream desaturates resting tiles; these are flat brand colours already. */
+    filter: none;
+}
+
+.projects-wall .drift-wall__tile.is-active .drift-wall__inner,
+.projects-wall .drift-wall__tile:focus-visible .drift-wall__inner {
+    border-color: rgb(125 211 252); /* sky-300 */
+    box-shadow: 0 30px 60px -22px rgb(2 132 199 / 0.45);
+}
+
+.projects-wall .drift-wall__tile:focus-visible .drift-wall__inner {
+    outline: 2px solid rgb(14 165 233);
+    outline-offset: 2px;
+}
+
+.dark .projects-wall .drift-wall__inner {
+    background: #0f1729;
+    border-color: rgb(30 41 59); /* slate-800 */
+    box-shadow: 0 12px 32px -22px rgb(0 0 0 / 0.75);
+}
+
+.dark .projects-wall .drift-wall__tile.is-active .drift-wall__inner,
+.dark .projects-wall .drift-wall__tile:focus-visible .drift-wall__inner {
+    border-color: rgb(56 189 248); /* sky-400 */
+    box-shadow: 0 30px 60px -22px rgb(2 132 199 / 0.55);
+}
