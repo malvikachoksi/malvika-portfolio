@@ -16,7 +16,7 @@ export default function Footer() {
                             {PERSONAL_INFO.name.split(" ")[0]}<span className="text-foreground">.</span>
                         </div>
                         <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
-                            {PERSONAL_INFO.subtitle}. Always exploring new technologies and pushing the boundaries of web development.
+                            Turning ideas into fast, thoughtful software — from pixel-perfect interfaces to the APIs behind them. Let&apos;s build something people love to use.
                         </p>
                     </div>
 

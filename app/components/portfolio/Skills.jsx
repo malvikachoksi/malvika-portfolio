@@ -103,10 +103,11 @@ function Bubble({ node, isDark, reduced, progress }) {
                     >
                         {Icon ? (
                             // Rest desaturated (clean monochrome chip); full brand
-                            // colour returns on hover.
+                            // colour returns on hover. Light theme also darkens, or pale
+                            // brand colours (JS yellow, React cyan) wash out on white.
                             <span
                                 aria-hidden="true"
-                                className="[filter:grayscale(0.9)] transition-[filter] duration-300 group-hover:[filter:grayscale(0)]"
+                                className="[filter:grayscale(1)_brightness(0.45)] dark:[filter:grayscale(0.9)] transition-[filter] duration-300 group-hover:[filter:none] dark:group-hover:[filter:none]"
                                 style={{ color: tint, fontSize: "calc(var(--bubble) * 0.44)" }}
                             >
                                 <Icon />

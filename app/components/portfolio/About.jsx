@@ -40,9 +40,10 @@ export default function About() {
 
                         <ScrollReveal delay={0.1}>
                             <p className="text-slate-600 leading-relaxed">
-                                I enjoy turning ideas and designs into interactive, accessible interfaces while writing clean and
-                                maintainable code. I'm always curious about new technologies and continuously improving my skills
-                                to build better products and user experiences.
+                                At Olix Lab, I work across the stack: React and Next.js frontends, React Native apps with Expo,
+                                and REST APIs with Node.js, Express, MongoDB and PostgreSQL. I care about clean, maintainable
+                                code, performance and SEO, and I keep learning new tools to ship better products for users and
+                                businesses.
                             </p>
                         </ScrollReveal>
 
@@ -65,10 +66,14 @@ export default function About() {
                         </ScrollReveal>
 
                         <ScrollReveal delay={0.3}>
-                            <button className="mt-4 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-all duration-300 hover:shadow-lg hover:shadow-primary/25">
+                            <a
+                                href="/Malvika-Choksi-Resume.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="mt-4 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-all duration-300 hover:shadow-lg hover:shadow-primary/25">
                                 <Download className="w-4 h-4" />
                                 Download Resume
-                            </button>
+                            </a>
                         </ScrollReveal>
                     </div>
 

@@ -6,7 +6,6 @@ import {
 } from "lucide-react";
 import { PERSONAL_INFO, STATS } from "@/lib/portfolioData";
 import ScrollReveal from "./ScrollReveal";
-import MagneticButton from "./MagneticButton";
 
 // Scattered tech glyphs behind the hero — a backdrop, not prominent cards, so
 // the centred content stays the focus.
@@ -108,20 +107,20 @@ export default function Hero() {
                 {/* CTA Buttons */}
                 <ScrollReveal delay={0.4}>
                     <div className="flex flex-wrap justify-center gap-4 mb-10">
-                        <MagneticButton
+                        <a
                             href="#projects"
                             onClick={(e) => { e.preventDefault(); document.querySelector("#projects")?.scrollIntoView({ behavior: "smooth" }); }}
-                            className="px-8 py-3.5 rounded-xl bg-gradient-to-r from-sky-500 to-cyan-500 text-white font-semibold text-base shadow-lg shadow-sky-500/25 hover:from-sky-400 hover:to-cyan-400 hover:shadow-xl hover:shadow-sky-500/35 transition-shadow"
+                            className="inline-block px-8 py-3.5 rounded-xl bg-gradient-to-r from-sky-500 to-cyan-500 text-white font-semibold text-base hover:from-sky-600 hover:to-cyan-600"
                         >
                             View My Work
-                        </MagneticButton>
-                        <MagneticButton
+                        </a>
+                        <a
                             href="#contact"
                             onClick={(e) => { e.preventDefault(); document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" }); }}
-                            className="px-8 py-3.5 rounded-xl bg-white border-2 border-slate-300 text-slate-700 font-semibold text-base shadow-sm hover:border-sky-400 hover:text-sky-600 hover:shadow-md transition-colors dark:border-slate-700 dark:hover:border-sky-500"
+                            className="inline-block px-8 py-3.5 rounded-xl bg-white border-2 border-slate-300 text-slate-700 font-semibold text-base hover:bg-sky-50 hover:border-sky-400 hover:text-sky-600 transition-colors dark:border-slate-700 dark:hover:border-sky-500"
                         >
                             Contact Me
-                        </MagneticButton>
+                        </a>
                     </div>
                 </ScrollReveal>
 

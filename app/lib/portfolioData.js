@@ -6,7 +6,7 @@ export const PERSONAL_INFO = {
     email: "malvikachoksi55@gmail.com",
     location: "Surat, Gujarat, India",
     availability: "Open to work",
-    bio: "I'm a passionate front-end developer with 2+ years of experience building modern, responsive, and user-friendly web applications. I specialize in React, TypeScript, and creating smooth digital experiences that combine clean design with solid performance.",
+    bio: "I'm Malvika Choksi, a Software Developer in Surat, India, with 2+ years of experience building fast, responsive and accessible web and mobile applications. I specialize in React, Next.js, TypeScript and Node.js, taking products from Figma designs to production-ready interfaces and the APIs behind them.",
     social: {
         github: "https://github.com/malvikachoksi",
         linkedin: "https://www.linkedin.com/in/malvika-choksi-303199241/",
@@ -63,7 +63,7 @@ export const PROCESS = [
 ];
 
 export const EXPERIENCE = [
-    { role: "Frontend Developer", company: "Olix Lab · Full-time", dates: "Dec 2025 – Present", description: "Building modern, responsive web interfaces using React and Next.js. Focused on delivering performant, accessible, and maintainable frontend solutions for production applications." },
+    { role: "Software Developer", company: "Olix Lab · Full-time", dates: "Dec 2025 – Present", description: "Building modern, responsive web interfaces using React and Next.js. Focused on delivering performant, accessible, and maintainable frontend solutions for production applications." },
     { role: "Junior Frontend Developer", company: "WIZCODER · Full-time", dates: "Sep 2024 – Nov 2025", description: "Developed scalable frontend solutions with React.js and TypeScript. Built reusable components, improved application performance, and collaborated with designers and backend developers across multiple client projects." },
     { role: "Web Developer Intern", company: "MountainsDriven Technologies · Part-time", dates: "Aug 2023 – Dec 2023", description: "Developed and maintained web application features using React and JavaScript. Worked on UI improvements, bug fixes, and integrating APIs to deliver smooth user experiences." },
     { role: "Frontend Web Developer", company: "TechnoYuga Soft. Pvt. ltd. · Internship", dates: "Jul 2022 – Jul 2023", description: "Built responsive web applications using React.js and modern frontend tools. Collaborated with the team to translate designs into clean, interactive interfaces and gained hands-on experience in component-based development." },
